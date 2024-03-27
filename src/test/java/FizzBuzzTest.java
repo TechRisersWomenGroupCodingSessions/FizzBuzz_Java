@@ -1,6 +1,7 @@
 import org.example.FizzBuzz;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,6 +57,13 @@ public class FizzBuzzTest {
         FizzBuzz fizzbuzz = new FizzBuzz();
         List<Integer> listOfNumbers = List.of(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
         List<String> listOfStrings = List.of("1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz");
+        assertEquals(fizzbuzz.FizzBuzzMethod(listOfNumbers), listOfStrings);
+    }
+
+    @Test void emptyListReturnsEmpty() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        List<Integer> listOfNumbers = new ArrayList<>();
+        List<String> listOfStrings = new ArrayList<>();
         assertEquals(fizzbuzz.FizzBuzzMethod(listOfNumbers), listOfStrings);
     }
 
