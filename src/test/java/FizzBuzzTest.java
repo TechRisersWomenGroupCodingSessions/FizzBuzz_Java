@@ -19,8 +19,25 @@ public class FizzBuzzTest {
 
     @Test void divisibleBy3isFizz() {
         FizzBuzz fizzbuzz = new FizzBuzz();
-        assertEquals(fizzbuzz.FizzBuzzMethod(15),"Fizz");
+        assertEquals(fizzbuzz.FizzBuzzMethod(9),"Fizz");
     }
+
+    @Test void divisibleby5isBuzz() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals(fizzbuzz.FizzBuzzMethod(10),"Buzz");
+    }
+
+    @Test void divisibleby5and3isFizzBuzz() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals(fizzbuzz.FizzBuzzMethod(15),"FizzBuzz");
+    }
+
+    @Test void notdivisibleby5or3isStringRepresentativeOfNumber() {
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        assertEquals(fizzbuzz.FizzBuzzMethod(13),"13");
+    }
+
+    //list of numbers
 
 
 }
